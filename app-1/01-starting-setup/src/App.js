@@ -2,10 +2,11 @@ import React, {useState} from "react";
 
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Chart from "./components/chart/Chart";
 
 const App = () => {
 
-  const [expenses, setExpenses] = useState([
+  const DUMMY_EXPENSES = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -25,9 +26,10 @@ const App = () => {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ]);
+  ];
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  const addExpenseHandler = (newExpense) => {
+  const addExpenseHandler =  (newExpense) => {
     setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
   }
 
