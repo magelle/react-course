@@ -1,6 +1,6 @@
 import './App.css';
 import AddUser from "./components/Users/AddUser";
-import {useState} from "react";
+import {Fragment, useState} from "react";
 import UsersList from "./components/Users/UsersList";
 
 function App() {
@@ -13,10 +13,10 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <AddUser addUser={addUserHandler}/>
       <UsersList users={userList}/>
-    </div>
+    </>
   );
 }
 
